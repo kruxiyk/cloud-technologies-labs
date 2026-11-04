@@ -1,0 +1,2 @@
+ADMIN_TOKEN="replace-with-a-long-random-secret"
+GCP_SA_KEY='{"project_id":"YOUR_PROJECT_ID","client_email":"YOUR_SERVICE_ACCOUNT_EMAIL","private_key":"-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n"}'
