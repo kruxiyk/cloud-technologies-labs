@@ -1,0 +1,26 @@
+# Файли, яких docker build не передає в образ (як .gitignore для git).
+# секрети: ключі сервісних акаунтів і паролі тестових користувачів лише в змінних середовища, не в образі
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+.test-users.json
+*-token.txt
+*.pem
+*.key
+# усі .json, крім списку пакетів: файл ключа сервісного акаунта, забутий у каталозі, теж .json
+*.json
+!package.json
+!package-lock.json
+# пакети: образ ставить свої (npm ci) для Linux
+node_modules/
+# локальна база SQLite, тимчасові файли Wrangler, історія git
+data/
+.wrangler/
+.git/
+__pycache__/
+results/
+test/
+*.docx
+*.pdf
+REPORT*.html

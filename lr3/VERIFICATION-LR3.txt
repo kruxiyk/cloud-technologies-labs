@@ -1,0 +1,29 @@
+ЛР3 · В10 · Локальна перевірка, 04.11.2026
+
+Node.js v24.22.2; @hono/node-server 1.19.18; firebase-admin 13.10.0.
+Синтаксис усіх JS/MJS: OK.
+Автономні тести ЛР2: 10 пройшли, 0 помилок.
+Процес Node.js server.mjs: порт 8000, перевірка стану /status.
+GET /status: 200, Cache-Control: no-store.
+GET /login: 200, text/html, Cache-Control: no-store.
+GET /login.js: 200, text/javascript, Cache-Control: no-store.
+GET /firebase-config.json: 200, Cache-Control: no-store.
+GET /api/parcels?status=доставлено&city=Київ без токена: 401, no-store.
+npm run check -- http://localhost:8000 проти справжньої Firebase:
+Пройшло 24 з 24.
+
+Пробний rc.mjs: API повертає 200 для alice, bob і mod та 401 без токена.
+Remote Config поки не доступний: remote-config/permission-denied,
+source=static (потрібно додати роль Viewer і опублікувати Server-параметр).
+Це діагностика незавершеного налаштування, не демонстрація зміни параметра.
+
+Перевірка створила тестові записи CHECK2-V10 у наявній Firestore,
+як передбачено check2.mjs; це не повторний запуск seed.
+Усі файли src, public і check2.mjs збережено з ЛР2 без змін.
+Готовий remote-config.js і Dockerfile збігаються з архівом викладача.
+
+Не виконано й не заявляється виконаним:
+- збирання Docker-образу (локальний Docker не потрібен за методичкою);
+- розгортання на Render та check2 за адресою Render;
+- публікація параметра Remote Config і демонстрація до/після;
+- вимірювання холодного старту після 20 хв простою.

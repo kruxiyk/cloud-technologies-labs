@@ -1,0 +1,28 @@
+{
+  "name": "lab3-v10-delivery",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "predeploy": "node scripts/ready.mjs",
+    "deploy": "wrangler deploy",
+    "test": "node --test test/api.test.js",
+    "check:syntax": "node syntax.mjs",
+    "check": "node scripts/run-check.mjs",
+    "configure": "node scripts/configure.mjs",
+    "seed": "node seed.mjs",
+    "start": "node --env-file=config.env server.mjs",
+    "dev:container": "node --env-file=config.env --env-file=.dev.vars server.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.0",
+    "firebase-admin": "^13.0.0"
+  }
+}

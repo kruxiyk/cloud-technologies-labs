@@ -1,0 +1,18 @@
+{
+  "name": "lab1-v10-delivery",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "vars": {
+    "FIREBASE_API_KEY": "AIzaSyCD6tRD4ZKoj6faSFMWlp4i1V0TEaOekHo",
+    "FIREBASE_PROJECT_ID": "lab1-v10-delivery",
+    "FIREBASE_AUTH_DOMAIN": "lab1-v10-delivery.firebaseapp.com"
+  }
+}
